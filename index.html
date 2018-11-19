@@ -36,18 +36,18 @@
         }
         .pro-card {
             /* Indicates that the children of the element should be positioned in the 3D-space. */
-            /* so that mfing text onna top finna stay onna top, ya herd. */
+            /* so the text will stay on top of the card. */
             transform-style: preserve-3d;
-            /* so dis mfer finna turn straight fromma center left of itself, ya feeeel. */
+            /* this will transform from the center left point of itself */
             transform-origin: center left;
-            /* bitch better take 1 any only 1 mfing seconna transform, biitch. */
+            /* take 1 sec to transform */
             transition: transform 1s;
-            /* is where da pro card pos starts, jussa lil turnt out */
+            /* this is where the pro card pos starts, just a  little turned out */
             transform: perspective(600px) rotateY(-50deg);
         }
 
         .pro-card:hover {
-            /* on hover, we gon set it back and facts! and run up a lil animation on his ass!*/
+            /* on hover, set it back */
             /* animation-play-state:running; */
             transform: rotateY(0deg);
             justify-content: center;
@@ -65,7 +65,6 @@
             /* animation: 2s alternate slide-left-to-center paused; */
         }
         /* define the keyframes here from starting point of animation to ending point. */
-        /* we finna getthis bitcch all the way lit wed ezee animationz. */
         /* @keyframes slide-left-to-center {
             from {
             }
