@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Voters Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <style> 
+        body { font-family: sans-serif; }
+        /* define the scene */
+        .scene {  
+            background: black;
+            width: 400px;
+            height: 300px;
+            padding: 64px 8px;
+            display: flex;
+            margin: 100px 200px;
+        }
+        .card {
+            /* position: absolute; */
+            /* width: 100%;
+            height: 100%; */
+            /* line-height: 260px; */
+            color: white;
+            text-align: center;
+            /* font-weight: bold;
+            font-size: 40px;
+            backface-visibility: hidden; */
+            border: 2px solid white;
+            background: red;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .pro-card {
+            /* Indicates that the children of the element should be positioned in the 3D-space. */
+            /* so that mfing text onna top finna stay onna top, ya herd. */
+            transform-style: preserve-3d;
+            /* so dis mfer finna turn straight fromma center left of itself, ya feeeel. */
+            transform-origin: center left;
+            /* bitch better take 1 any only 1 mfing seconna transform, biitch. */
+            transition: transform 1s;
+            /* is where da pro card pos starts, jussa lil turnt out */
+            transform: perspective(600px) rotateY(-50deg);
+        }
+
+        .pro-card:hover {
+            /* on hover, we gon set it back and facts! and run up a lil animation on his ass!*/
+            /* animation-play-state:running; */
+            transform: rotateY(0deg);
+            justify-content: center;
+        }
+        .con-card {
+            transform-style: preserve-3d;
+            transform-origin: center right;
+            transition: transform 1s;
+            transform:  perspective(600px) rotateY(50deg);
+        }
+        .con-card:hover {
+            transform: rotateY(0deg);
+        }
+        .slide-left-to-center {
+            /* animation: 2s alternate slide-left-to-center paused; */
+        }
+        /* define the keyframes here from starting point of animation to ending point. */
+        /* we finna getthis bitcch all the way lit wed ezee animationz. */
+        /* @keyframes slide-left-to-center {
+            from {
+            }
+            to {
+            }
+        } */
+
+        /* .shift-left {
+            transform:translate3d(-100px, 0, 0);
+        }
+
+        .shift-left .pro-card {
+            transform: rotate3d(0, 0deg, 0);
+        }
+
+        .shift-left .con-card {
+            transform: rotate3d(0, -30deg, 0);
+        } */
+
+    </style>
+</head>
+<body>
+        <div class="scene">
+            <div class="slide-left-to-center card pro-card">
+                <h4>Prop Name</h4>
+                <div>Pros</div>
+            </div>
+            <div class="card con-card">
+                <div>Cons</div>
+            </div>
+        </div>
+    <script>
+        console.log("here");  
+        var element = document.getElementsByClassName("pro-card");
+        element.className = "slidein";
+    </script>
+    </body>
+</html>

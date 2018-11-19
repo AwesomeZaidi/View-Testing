@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* slider class is like the container of the items we'd be sliding */
+        .slider {
+            width: 400px;
+            height: 400px;
+            /* display: flex; */
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch;
+        }
+        /* slide is the animation we want each item to have */
+        .slide {
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="slider">
+            <div class="slide" id="slide-1">1</div>
+            <div class="slide" id="slide-2">2</div>
+            <div class="slide" id="slide-3">3</div>
+            <div class="slide" id="slide-4">4</div>
+            <div class="slide" id="slide-5">5</div>
+        </div>
+    </main>
+
+    <script>
+
+    </script>
+</body>
+</html>

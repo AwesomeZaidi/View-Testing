@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Voters Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <style> 
+        .slidein {
+            animation: 3s infinite alternate slidein;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%; 
+            }
+
+            75% {
+                font-size: 300%;
+                margin-left: 25%;
+                width: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        </style>
+</head>
+<body>
+
+    <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations -->
+
+    <h1 id="watchme">Watch me move</h1>
+    <p>
+    This example shows how to use CSS animations to make <code>H1</code>
+    elements move across the page.
+    </p>
+    <p>
+    In addition, we output some text each time an animation event fires,
+    so you can see them in action.
+    </p>
+    <ul id="output">
+    </ul>
+    <script type="text/javascript">
+            function listener(event) {
+                var l = document.createElement("li");
+                // learn more about switch, case, and document methods
+                switch(event.type) {
+                    case "animationstart":
+                    l.innerHTML = "Started: elapsed time is " + event.elapsedTime;
+                    break;
+                    case "animationend":
+                    l.innerHTML = "Ended: elapsed time is " + event.elapsedTime;
+                    break;
+                    case "animationiteration":
+                    l.innerHTML = "New loop started at time " + event.elapsedTime;
+                    break;
+                }
+                document.getElementById("output").appendChild(l);
+            }
+
+            var element = document.getElementById("watchme");
+            element.addEventListener("animationstart", listener, false);
+            element.addEventListener("animationend", listener, false);
+            element.addEventListener("animationiteration", listener, false);
+            element.className = "slidein";
+    </script>
+</body>
+</html>
